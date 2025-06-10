@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Preahvihear&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
+
+@layer base {
+  :root {
+    --background: 240 10% 8%;
+    --foreground: 280 5% 95%;
+
+    --card: 240 15% 12%;
+    --card-foreground: 280 5% 95%;
+
+    --popover: 240 15% 12%;
+    --popover-foreground: 280 5% 95%;
+
+    --primary: 270 100% 70%;
+    --primary-foreground: 240 10% 8%;
+
+    --secondary: 240 15% 15%;
+    --secondary-foreground: 280 5% 95%;
+
+    --muted: 240 15% 15%;
+    --muted-foreground: 280 5% 65%;
+
+    --accent: 280 100% 75%;
+    --accent-foreground: 240 10% 8%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 240 15% 20%;
+    --input: 240 15% 20%;
+    --ring: 270 100% 70%;
+
+    --radius: 0.75rem;
+
+    /* Custom cosmic colors */
+    --cosmic-purple: 270 100% 70%;
+    --cosmic-blue: 250 100% 75%;
+    --cosmic-pink: 320 100% 75%;
+    --deep-space: 240 10% 8%;
+    --space-gray: 240 15% 12%;
+    --nebula-glow: 270 100% 85%;
+  }
+
+  .dark {
+    --background: 240 10% 8%;
+    --foreground: 280 5% 95%;
+
+    --card: 240 15% 12%;
+    --card-foreground: 280 5% 95%;
+
+    --popover: 240 15% 12%;
+    --popover-foreground: 280 5% 95%;
+
+    --primary: 270 100% 70%;
+    --primary-foreground: 240 10% 8%;
+
+    --secondary: 240 15% 15%;
+    --secondary-foreground: 280 5% 95%;
+
+    --muted: 240 15% 15%;
+    --muted-foreground: 280 5% 65%;
+
+    --accent: 280 100% 75%;
+    --accent-foreground: 240 10% 8%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 240 15% 20%;
+    --input: 240 15% 20%;
+    --ring: 270 100% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background: linear-gradient(
+      135deg,
+      hsl(var(--deep-space)),
+      hsl(240 15% 12%)
+    );
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  .cosmic-gradient {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--cosmic-purple)),
+      hsl(var(--cosmic-blue))
+    );
+  }
+
+  .nebula-gradient {
+    background: linear-gradient(
+      45deg,
+      hsl(var(--cosmic-purple)),
+      hsl(var(--cosmic-pink))
+    );
+  }
+
+  .glow-purple {
+    box-shadow: 0 0 20px hsl(var(--cosmic-purple) / 0.3);
+  }
+
+  .glow-blue {
+    box-shadow: 0 0 20px hsl(var(--cosmic-blue) / 0.3);
+  }
+
+  .text-cosmic {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--cosmic-purple)),
+      hsl(var(--cosmic-blue))
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@layer utilities {
+  .float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .skill-orbit-container {
+    animation: skillOrbitRotate 30s linear infinite;
+    transform-origin: center;
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes skillFloat {
+    0%,
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+  }
+
+  @keyframes skillOrbitRotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
