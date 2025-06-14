@@ -1,5 +1,5 @@
-import React from "react";
-
+import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
 const ContactSection = () => {
   return (
     <section className="py-20 px-6">
@@ -24,22 +24,28 @@ const ContactSection = () => {
         {/* Social links */}
         <div className="flex justify-center space-x-6 mt-12">
           <a
-            href="#"
+            href="mailto:anushaa102002@gmail.com"
             className="w-12 h-12 bg-card border border-border rounded-lg flex items-center justify-center hover:border-cosmic-purple/50 transition-colors"
           >
-            <span className="text-cosmic-purple">@</span>
+            <SiGmail className="text-cosmic-purple" />
           </a>
           <a
-            href="#"
+            href="https://www.linkedin.com/in/anusha-murugesan-52a978269"
             className="w-12 h-12 bg-card border border-border rounded-lg flex items-center justify-center hover:border-cosmic-blue/50 transition-colors"
           >
-            <span className="text-cosmic-blue">in</span>
+            <FaLinkedin className="text-cosmic-blue" />
           </a>
           <a
-            href="#"
+            href="https://github.com/AnushaMurugesan"
             className="w-12 h-12 bg-card border border-border rounded-lg flex items-center justify-center hover:border-cosmic-pink/50 transition-colors"
           >
-            <span className="text-cosmic-pink">gh</span>
+            <FaGithub className="text-cosmic-pink" />
+          </a>
+          <a
+            href="https://www.instagram.com/_.itx.anu._/"
+            className="w-12 h-12 bg-card border border-border rounded-lg flex items-center justify-center hover:border-cosmic-pink/50 transition-colors"
+          >
+            <FaInstagram className="text-cosmic-purple" />
           </a>
         </div>
       </div>

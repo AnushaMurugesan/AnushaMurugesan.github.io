@@ -2,7 +2,7 @@ import React from "react";
 
 const HeroSectionV2 = () => {
   return (
-    <section className="min-h-screen flex flex-col items-start justify-center px-4 md:px-16 py-16 relative overflow-hidden text-white font-preahvihear pt-[5rem] md:pt-[7rem]">
+    <section id="home" className="min-h-screen flex flex-col items-start justify-center px-4 md:px-16 py-16 relative overflow-hidden text-white font-preahvihear pt-[5rem] md:pt-[7rem]">
       {/* Glowing star background animation */}
       {/* You can adjust the number, color, and position of these stars as needed */}
       <div className="pointer-events-none absolute inset-0 z-0">
@@ -134,9 +134,13 @@ const HeroSectionV2 = () => {
 
       {/* Software Engineer headline and description - stack on mobile */}
       <div className="mt-8 md:mt-20 w-full flex flex-col items-center md:items-start md:ml-8">
-        <h1 className="text-3xl md:text-5xl md:text-6xl font-bold mb-2 text-center md:text-left">
-          I'm a React JS Full Stack Developer.
-          <span className="text-[#a78bfa]">|</span>
+        <h1 className="text-3xl  md:text-4xl font-bold mb-2 text-center md:text-left">
+          <div>
+            I'm a Frontend Developer (React / Next) |
+          </div>
+          <div>Full-Stack Experience (Prisma + Next.js) |
+          </div>
+
         </h1>
         <div className="flex items-center text-xs md:text-sm text-[#b6a6e6] mb-4 justify-center md:justify-start">
           <span>
@@ -145,7 +149,7 @@ const HeroSectionV2 = () => {
           </span>
         </div>
         <p className="text-sm md:text-md text-[#e0e0e0] max-w-2xl mt-4 text-center md:text-left">
-          A self-taught React JS Full Stack Developer with 2+ years of
+          A self-taught Frontend Developer (React / Next) with Full-Stack Experience (Prisma + Next.js) over 2+ years of
           experience.
           <br />I create robust, user-friendly digital products that bridge the
           gap between design and technology, delivering value to both users and

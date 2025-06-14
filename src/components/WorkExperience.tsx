@@ -1,36 +1,43 @@
-import React from "react";
+import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
 
 const WorkExperience = () => {
+  const icons = [
+    {
+      icon: <FaLinkedin className="text-lg" />,
+      link: "https://www.linkedin.com/in/anusha-murugesan-52a978269/",
+    },
+    {
+      icon: <FaGithub className="text-lg" />,
+      link: "https://github.com/AnushaMurugesan",
+    },
+    // {
+    //   icon: <FaInstagram className="text-lg" />,
+    //   link: "https://www.instagram.com/yourprofile",
+    // },
+    {
+      icon: <SiGmail className="text-lg" />,
+      link: "mailto:anushaa102002@gmail.com",
+    },
+  ];
+
   const experiences = [
     {
       company: "Analytics Aura",
-      position: "Junior Product Analyst",
+      position: "Junior Programmer Analyst",
       period: "2024 - Present",
-      description: "Product Analyst in Mass Data Management System",
+      description: "Programmer Analyst in a Master Data Management System, where I designed and developed the entire system from scratch — including the front-end interface, dynamic form builder with real-time preview, routing architecture, and backend logic for data processing and dynamic table creation.",
       color: "cosmic-blue",
     },
     {
-      company: "Bytecomp Technologies",
-      position: "Frontend Developer",
+      company: "Bytecompass",
+      position: "Junior Frontend Developer",
+
       period: "2023 - 2024",
       description:
-        "React JS Developer for logistics and supply chain management",
+        "As a React JS Developer, I built responsive, intuitive interfaces with custom animations, and developed role-based pages, reusable components, and scalable styles using Tailwind CSS and SASS to ensure a consistent, seamless user experience across devices.",
       color: "cosmic-purple",
     },
-    // {
-    //   company: "CIB on the Mobile",
-    //   position: "Junior Designer",
-    //   period: "2019 - 2020",
-    //   description: "Started journey in digital product design",
-    //   color: "cosmic-purple"
-    // },
-    // {
-    //   company: "CIB on the Mobile",
-    //   position: "Design Intern",
-    //   period: "2018 - 2019",
-    //   description: "Learned fundamentals of user interface design",
-    //   color: "cosmic-pink"
-    // }
   ];
 
   return (
@@ -39,7 +46,6 @@ const WorkExperience = () => {
         <h2 className="text-4xl font-bold mb-16 text-center">
           Work Experience
         </h2>
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {experiences.map((exp, index) => (
             <div
@@ -78,14 +84,18 @@ const WorkExperience = () => {
           </p>
 
           {/* Social icons placeholder */}
+
           <div className="flex justify-center space-x-4 mt-8">
-            {["f", "@", "in", "tw", "ig", "gh"].map((icon, index) => (
-              <div
+            {icons.map((item, index) => (
+              <a
                 key={index}
-                className="w-10 h-10 rounded-lg bg-card border border-border flex items-center justify-center hover:border-cosmic-purple/50 transition-colors cursor-pointer"
+                href={item.link}
+                target="_blank"
+                // rel="noopener noreferrer"
+                className="w-10 h-10 rounded-lg bg-card  border border-border flex items-center justify-center hover:border-cosmic-purple/50 transition-colors cursor-pointer"
               >
-                <span className="text-sm text-muted-foreground">{icon}</span>
-              </div>
+                {item.icon}
+              </a>
             ))}
           </div>
         </div>

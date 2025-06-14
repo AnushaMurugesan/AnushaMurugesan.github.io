@@ -16,23 +16,23 @@ const Navigation = () => {
           ∑
         </div>
         <div className="flex space-x-8">
-          <button 
-            onClick={() => scrollToSection('home')} 
+          <button
+            onClick={() => scrollToSection('home')}
             className="text-foreground hover:text-cosmic-purple transition-colors cursor-pointer"
           >
             Home
           </button>
-          <button 
-            onClick={() => scrollToSection('about')} 
+          <button
+            onClick={() => scrollToSection('about')}
             className="text-foreground hover:text-cosmic-purple transition-colors cursor-pointer"
           >
             About
           </button>
-          <button 
-            onClick={() => scrollToSection('lab')} 
+          <button
+            onClick={() => scrollToSection('projects')}
             className="text-foreground hover:text-cosmic-purple transition-colors cursor-pointer"
           >
-            Lab
+            Projects
           </button>
         </div>
       </div>

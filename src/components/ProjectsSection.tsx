@@ -2,7 +2,7 @@ import React from "react";
 
 const ProjectsSection = () => {
   return (
-    <section id="lab" className="py-20 px-6 relative">
+    <section id="projects" className="py-20 px-6 relative">
       {/* Cosmic background element */}
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-gradient-to-r from-cosmic-purple/10 to-cosmic-blue/10 blur-3xl"></div>
 
@@ -35,10 +35,10 @@ const ProjectsSection = () => {
                 MDM (Master Data Management)
               </h2>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                Master Data Management system allowing user, module, and group
-                creation with controlled access for users within modules. It
-                features a responsive form builder to create multiple form
-                screens for each module.
+                A robust system that enables the creation of users, groups, and modules with controlled access permissions. It includes a
+                fully responsive, drag-and-drop form builder that allows users to create custom input forms with validations. Each form
+                dynamically generates and maps to database tables for structured data storage.
+
                 <br />
                 <br />
               </p>
@@ -71,9 +71,10 @@ const ProjectsSection = () => {
               </h3>
               <h2 className="text-4xl font-bold mb-6">Atvara</h2>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                Logistics - streamlines hotel chain operations, enabling branch
-                management, user access control, and inventory tracking. Its
-                tools help reduce food waste.
+                Logistics - A comprehensive logistics platform built to optimize and streamline daily operations for hotel chains. It enables
+                centralized management of multiple branches by offering features such as branch-level configuration, user access control
+                based on roles, and real-time inventory tracking. The system is designed to improve operational transparency, enhance
+                resource planning, and support better decision-making across locations
               </p>
               <div className="flex space-x-4">
                 <div className="w-10 h-10 bg-card border border-border rounded-lg flex items-center justify-center">
@@ -103,9 +104,9 @@ const ProjectsSection = () => {
               </h3>
               <h2 className="text-4xl font-bold mb-6">Bytecompass Website</h2>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                A responsive IT company website wit h dynamic animations,
-                showcasing projects, ser vices, and met hodologies to boost user
-                engagement.
+                A fully responsive website for an IT solutions company, designed to showcase its projects, services, and development
+                methodologies in a visually engaging and interactive way. The website features smooth, custom-built animations and
+                dynamic UI elements aimed at improving user engagement and conveying a modern, tech-forward brand identity.
                 <br />
                 <br />
               </p>
@@ -139,8 +140,8 @@ const ProjectsSection = () => {
               </h3>
               <h2 className="text-4xl font-bold mb-6">Jerobyte</h2>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                An interactive business dashboard wit h call repor ts, customer
-                metrics, and revenue char ts for data-driven decision-making.
+                I contributed to developing a responsive business dashboard with Chart.js integration, 
+                delivering dynamic call reports, customer metrics, and revenue charts for data-driven decisions.
               </p>
               <div className="flex space-x-4">
                 <div className="w-10 h-10 bg-card border border-border rounded-lg flex items-center justify-center">
