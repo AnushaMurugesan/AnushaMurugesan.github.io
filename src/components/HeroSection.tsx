@@ -58,7 +58,7 @@ const HeroSection = () => {
           </div>
 
           {/* Right side - Main quote content */}
-          <div className="flex-1 ml-24 text-left flex flex-col justify-center relative">
+          <div className="flex-1 ml-24 text-left flex flex-col justify-center relative hide-on-mobile">
             {/* Underline for the whole quote */}
             <div
               className="absolute left-0 right-0"
