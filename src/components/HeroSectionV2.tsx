@@ -2,7 +2,10 @@ import React from "react";
 
 const HeroSectionV2 = () => {
   return (
-    <section id="home" className="min-h-screen flex flex-col items-start justify-center px-4 md:px-16 py-16 relative overflow-hidden text-white font-preahvihear pt-[5rem] md:pt-[7rem]">
+    <section
+      id="home"
+      className="min-h-screen flex flex-col items-start justify-center px-4 md:px-16 py-16 relative overflow-hidden text-white font-preahvihear pt-[5rem] md:pt-[7rem]"
+    >
       {/* Glowing star background animation */}
       {/* You can adjust the number, color, and position of these stars as needed */}
       <div className="pointer-events-none absolute inset-0 z-0">
@@ -78,14 +81,14 @@ const HeroSectionV2 = () => {
       </div>
 
       {/* Mobile: Name with hello, only on small screens */}
-      <div className="flex md:hidden flex-col items-center w-full mt-4 mb-2">
+      <div className="flex md:hidden flex-col items-center w-full mt-4 mb-2 hide-on-mobile">
         <span className="text-lg text-[#fff] font-medium">
           Hello! I Am <span className="text-[#a259ff]">Anusha</span>
         </span>
       </div>
 
       {/* Main content row - stack vertically on mobile */}
-      <div className="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-12 mt-4 md:mt-24 w-full md:ml-8">
+      <div className="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-12 mt-4 md:mt-24 w-full md:ml-8 ">
         {/* Avatar with glow */}
         <div className="relative flex-shrink-0 mb-2 md:mb-0">
           <div className="absolute inset-0 rounded-full blur-2xl bg-[#7c3aed] opacity-40 w-40 h-40 md:w-56 md:h-56 z-0" />
@@ -95,8 +98,11 @@ const HeroSectionV2 = () => {
             className="relative w-40 h-40 md:w-56 md:h-56 rounded-full z-10 shadow-2xl border-[#2d1a4a]"
           />
         </div>
+        <span className="text-base md:text-lg text-[#fff] font-medium whitespace-nowrap hidden show-on-mobile">
+          Hello! I Am <span className="text-[#a259ff]">Anusha</span>
+        </span>
         {/* Headline and subtext */}
-        <div className="flex flex-col items-center md:items-start w-full">
+        <div className="flex flex-col items-center md:items-start w-full hide-on-mobile">
           {/* Quote - only on mobile, show after avatar and name */}
           <span className="text-base text-[#b6a6e6] mb-1 md:hidden text-center">
             A Front End Developer who
@@ -134,23 +140,23 @@ const HeroSectionV2 = () => {
 
       {/* Software Engineer headline and description - stack on mobile */}
       <div className="mt-8 md:mt-20 w-full flex flex-col items-center md:items-start md:ml-8">
-        <h1 className="text-3xl  md:text-4xl font-bold mb-2 text-center md:text-left">
-          <div>
-            I'm a Frontend Developer (React / Next) |
-          </div>
-          <div>Full-Stack Experience (Prisma + Next.js) |
-          </div>
-
+        <h1 className="text-3xl  md:text-4xl font-bold mb-2 text-center md:text-left mobile-font-reduce hidden show-on-mobile">
+          <div className="main-heading-text">I'm a Full Stack-Developer</div>
+          <div>(React | Next.js | Prisma)</div>
         </h1>
-        <div className="flex items-center text-xs md:text-sm text-[#b6a6e6] mb-4 justify-center md:justify-start">
+        <h1 className="text-3xl  md:text-4xl font-bold mb-2 text-center md:text-left mobile-font-reduce hide-on-mobile">
+          <div>I'm a Frontend Developer (React / Next) |</div>
+          <div>Full-Stack Experience (Prisma + Next.js) |</div>
+        </h1>
+        <div className="flex items-center text-xs md:text-sm text-[#b6a6e6] mb-4 justify-center md:justify-start mobile-second-role-text">
           <span>
             Passionate about building scalable web applications and beautiful
             user interfaces.
           </span>
         </div>
-        <p className="text-sm md:text-md text-[#e0e0e0] max-w-2xl mt-4 text-center md:text-left">
-          A self-taught Frontend Developer (React / Next) with Full-Stack Experience (Prisma + Next.js) over 2+ years of
-          experience.
+        <p className="text-sm md:text-md text-[#e0e0e0] max-w-2xl mt-4 text-center md:text-left mobile-description-text">
+          A self-taught Frontend Developer (React / Next) with Full-Stack
+          Experience (Prisma + Next.js) over 2+ years of experience.
           <br />I create robust, user-friendly digital products that bridge the
           gap between design and technology, delivering value to both users and
           businesses.
